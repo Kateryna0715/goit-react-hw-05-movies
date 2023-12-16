@@ -1,0 +1,11 @@
+.movieContainer {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.movieInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

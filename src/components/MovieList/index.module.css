@@ -1,0 +1,11 @@
+.moviesListContainer {
+  padding: 20px;
+}
+
+.moviesList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px 12px;
+  justify-content: center;
+  align-items: baseline;
+}

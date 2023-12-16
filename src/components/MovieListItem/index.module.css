@@ -1,0 +1,33 @@
+.galleryItem {
+  width: calc((100% - 12px) / 5);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.posterImg {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.movieTitle {
+  margin-top: 8px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+
+.link {
+  color: #2e2f42;
+}
+
+.galleryItem:hover,
+.galleryItem:focus {
+  transform: scale(1.05);
+}
