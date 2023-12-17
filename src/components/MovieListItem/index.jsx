@@ -5,11 +5,12 @@ const defaultImg =
 
 const MovieListItem = ({ movieName, movieId, poster_path }) => {
   const location = useLocation();
+  console.log('location', location);
   return (
     <li className={CSS.galleryItem}>
       <Link
         className={CSS.link}
-        to={`movies/${movieId}`}
+        to={`/movies/${movieId}`}
         state={{ from: location }}
       >
         <img

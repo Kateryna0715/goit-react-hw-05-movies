@@ -1,5 +1,5 @@
 import CSS from './index.module.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -7,7 +7,9 @@ const Header = () => {
       <div className={CSS.headerContainer}>
         <nav className={CSS.headerNav}>
           <div className={CSS.LogoContainer}>
-            <span className={CSS.headerLogo}>Films</span>
+            <Link to="/">
+              <span className={CSS.headerLogo}>Films</span>
+            </Link>
           </div>
           <ul className={CSS.headerList}>
             <li>

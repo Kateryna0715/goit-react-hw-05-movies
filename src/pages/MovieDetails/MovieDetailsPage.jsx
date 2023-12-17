@@ -4,7 +4,7 @@ import { Outlet, useParams, Link, useLocation } from 'react-router-dom';
 import CSS from './movieDetails.module.css';
 import MovieCard from 'components/MovieCard';
 import Loader from 'components/Loader/Loader';
-import Notiflix from 'notiflix';
+import { Notify } from 'notiflix';
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
@@ -17,8 +17,8 @@ const MovieDetailsPage = () => {
   useEffect(() => {
     if (!movieId) return;
     const handleMovieDetails = async () => {
+      setIsLoading(true);
       try {
-        setIsLoading(true);
         const data = await getMovieById(movieId);
         if (data) {
           setMovieDetails(data);
@@ -26,7 +26,7 @@ const MovieDetailsPage = () => {
         }
       } catch (error) {
         setError(true);
-        Notiflix.Notify.failure(
+        Notify.failure(
           `Oops! ${error.message}! Please refresh the page and try again`,
           {
             position: 'center-center',

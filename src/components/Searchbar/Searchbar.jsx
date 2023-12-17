@@ -9,9 +9,10 @@ const Searchbar = ({ submit }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    if ({ query }) {
-      submit({ query });
+    if (query) {
+      submit(query);
     }
+    setQuery('');
     e.target.reset();
   };
   return (

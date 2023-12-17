@@ -13,8 +13,12 @@ export const getTrendingMovies = async () => {
 };
 
 export const getMovieByQuery = async query => {
-  const { data } = await axios(`movie/${query}`);
-  return data;
+  const { data } = await axios('search/movie', {
+    params: {
+      query: query,
+    },
+  });
+  return data.results;
 };
 
 export const getMovieById = async id => {
