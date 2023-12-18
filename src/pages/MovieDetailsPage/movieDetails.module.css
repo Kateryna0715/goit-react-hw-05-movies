@@ -9,14 +9,14 @@
   font-size: 16px;
   font-weight: 500;
   min-width: 80px;
-  background-color: #00a8b5;
-  color: #090404;
+  background-color: #4d5ae5;
+  color: #ffffff;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backButton:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  background-color: #0da5c9;
+  background-color: #3645e6;
 }
 .additionalContainer {
   border: 1px solid #e7e9fc;

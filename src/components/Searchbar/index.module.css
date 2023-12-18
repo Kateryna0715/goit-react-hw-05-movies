@@ -7,7 +7,7 @@
 
 .divInput {
   padding: 5px;
-  background: #f2f2f2;
+  background: #fff7f7;
   border: 1px solid #f2f2f2;
   width: 500px;
 }
@@ -23,7 +23,7 @@
 }
 
 .searchbar input:focus {
-  border: 2px solid #007bff;
+  border: 2px solid #4d5ae5;
 }
 
 .searchbar button {
@@ -34,12 +34,12 @@
   text-transform: uppercase;
   border: 2px;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: #4d5ae5;
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 .searchbar button:hover {
-  background-color: #0056b3;
+  background-color: #3645e6;
   transform: scale(1.05);
 }

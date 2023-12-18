@@ -54,7 +54,7 @@ const MovieDetailsPage = () => {
         <>
           <MovieCard movieData={movieDetails} />
           <div className={CSS.additionalContainer}>
-            <p className={CSS.additionalTitle}>Additional information</p>
+            <h2 className={CSS.additionalTitle}>Additional information</h2>
             <ul className={CSS.additionalList}>
               <li>
                 <Link className={CSS.link} to={'cast'}>

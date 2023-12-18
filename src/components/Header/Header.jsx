@@ -8,7 +8,7 @@ const Header = () => {
         <nav className={CSS.headerNav}>
           <div className={CSS.LogoContainer}>
             <Link to="/">
-              <span className={CSS.headerLogo}>Films</span>
+              <span className={CSS.headerLogo}>Filmoteka</span>
             </Link>
           </div>
           <ul className={CSS.headerList}>

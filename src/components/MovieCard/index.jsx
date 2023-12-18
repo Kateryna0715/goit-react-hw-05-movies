@@ -9,6 +9,7 @@ const MovieCard = ({ movieData }) => {
   return (
     <div className={CSS.movieContainer}>
       <img
+        className={CSS.moviePoster}
         src={
           poster_path
             ? `https://image.tmdb.org/t/p/w500/${poster_path}`
@@ -20,7 +21,12 @@ const MovieCard = ({ movieData }) => {
       />
       <div className={CSS.movieInfoContainer}>
         <h1>{title}</h1>
-        {popularity && <p>User Score: {Math.round(popularity)} %</p>}
+        {popularity && (
+          <p>
+            <span style={{ fontWeight: '700' }}>User Score:</span>{' '}
+            {Math.round(popularity)} %
+          </p>
+        )}
         {overview && (
           <>
             <h2>Overview</h2>
