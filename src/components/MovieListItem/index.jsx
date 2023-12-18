@@ -5,7 +5,7 @@ const defaultImg =
 
 const MovieListItem = ({ movieName, movieId, poster_path }) => {
   const location = useLocation();
-  console.log('location', location);
+
   return (
     <li className={CSS.galleryItem}>
       <Link
