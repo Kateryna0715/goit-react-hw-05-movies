@@ -12,8 +12,8 @@ const HomePage = () => {
 
   useEffect(() => {
     const handleMovies = async () => {
+      setIsLoading(true);
       try {
-        setIsLoading(true);
         const data = await getTrendingMovies();
         if (data.results.length) {
           setMovies(data.results);

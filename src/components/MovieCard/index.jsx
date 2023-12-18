@@ -20,11 +20,19 @@ const MovieCard = ({ movieData }) => {
       />
       <div className={CSS.movieInfoContainer}>
         <h1>{title}</h1>
-        <p>User Score: {Math.round(popularity)} %</p>
-        <h2>Overview</h2>
-        <p>{overview}</p>
-        <h2>Genres</h2>
-        <p>{genres && genres.map(genre => genre.name).join(', ')}</p>
+        {popularity && <p>User Score: {Math.round(popularity)} %</p>}
+        {overview && (
+          <>
+            <h2>Overview</h2>
+            <p>{overview}</p>
+          </>
+        )}
+        {genres && genres.length > 0 && (
+          <>
+            <h2>Genres</h2>
+            <p>{genres && genres.map(genre => genre.name).join(', ')}</p>
+          </>
+        )}
       </div>
     </div>
   );
