@@ -1,7 +1,8 @@
 import CSS from './index.module.css';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
+  const location = useLocation();
   return (
     <>
       <div className={CSS.headerContainer}>
@@ -13,7 +14,14 @@ const Header = () => {
           </div>
           <ul className={CSS.headerList}>
             <li>
-              <NavLink to="/" className={CSS.headerLink}>
+              <NavLink
+                to="/"
+                className={`${CSS.headerLink} ${
+                  location.pathname.includes('/goit-react-hw-05-movies')
+                    ? CSS.active
+                    : ''
+                }`}
+              >
                 Home
               </NavLink>
             </li>

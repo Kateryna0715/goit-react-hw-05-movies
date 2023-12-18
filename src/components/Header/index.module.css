@@ -7,6 +7,7 @@
   background-color: rgb(227, 247, 246);
   padding: 12px;
   margin-bottom: 24px;
+  max-width: 100%;
 }
 
 .headerNav {
