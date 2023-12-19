@@ -1,5 +1,5 @@
 import { getTrendingMovies } from 'api/api';
-import MovieList from 'components/MovieList';
+import MovieList from 'components/MovieList/MovieList';
 import { useEffect, useState } from 'react';
 import CSS from './index.module.css';
 import { Notify } from 'notiflix';

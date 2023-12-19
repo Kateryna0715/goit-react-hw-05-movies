@@ -1,4 +1,4 @@
-import MovieListItem from 'components/MovieListItem';
+import MovieListItem from 'components/MovieListItem/MovieListItem';
 import CSS from './index.module.css';
 
 const MovieList = ({ movies, onItemClick }) => {

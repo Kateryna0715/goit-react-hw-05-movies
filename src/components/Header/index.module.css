@@ -12,7 +12,9 @@
 
 .headerNav {
   display: flex;
+  gap: 50px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .headerLogo {
@@ -24,8 +26,7 @@
   text-decoration: none;
   text-transform: uppercase;
   color: #4d5ae5;
-  padding: 24px 0;
-  margin-right: 50px;
+  padding: 12px 0;
 }
 
 .headerList {

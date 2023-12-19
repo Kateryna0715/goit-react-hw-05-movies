@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import Loader from 'components/Loader/Loader';
 
 const Review = () => {
-  const [movieReviews, setMovieReviews] = useState();
+  const [movieReviews, setMovieReviews] = useState(null);
   const { movieId } = useParams();
   const [error, setError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -20,6 +20,7 @@ const Review = () => {
         if (data.results.length) {
           setMovieReviews(data.results);
           setError(false);
+          return;
         }
       } catch (error) {
         setError(true);
@@ -42,7 +43,7 @@ const Review = () => {
   return (
     !error && (
       <>
-        {movieReviews ? (
+        {movieReviews && movieReviews.length > 0 ? (
           <>
             {isLoading && <Loader />}
             <ul className={CSS.reviewsList}>

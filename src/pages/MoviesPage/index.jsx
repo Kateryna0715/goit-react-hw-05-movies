@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import { getMovieByQuery } from 'api/api';
 import Loader from 'components/Loader/Loader';
 import { Notify } from 'notiflix';
-import MovieList from 'components/MovieList';
+import MovieList from 'components/MovieList/MovieList';
 
 const MoviesPage = () => {
   const [isLoading, setIsLoading] = useState(false);

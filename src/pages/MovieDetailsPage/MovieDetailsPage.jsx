@@ -2,13 +2,13 @@ import { getMovieById } from 'api/api';
 import { useEffect, useRef, useState } from 'react';
 import { Outlet, useParams, Link, useLocation } from 'react-router-dom';
 import CSS from './movieDetails.module.css';
-import MovieCard from 'components/MovieCard';
+import MovieCard from 'components/MovieCard/MovieCard';
 import Loader from 'components/Loader/Loader';
 import { Notify } from 'notiflix';
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
-  const [movieDetails, setMovieDetails] = useState({});
+  const [movieDetails, setMovieDetails] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
   const location = useLocation();
